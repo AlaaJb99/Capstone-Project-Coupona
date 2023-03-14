@@ -1,0 +1,59 @@
+<div class="container mt-5 pt-5">
+  <div class="card">
+    <div class="row p-5">
+      <div class="col ms-5 pt-4">
+        <div class="text-center">
+          <!-- col1 the login form -->
+          <img class="mb-3" src="/assets/img/logo.png" alt="logo">
+          <h1 class="display-1 mb-5" style="font-family:Poor Richard;">
+            <strong>Login</strong>
+          </h1>
+        </div>
+        <div class="col-10 ms-5 mb-5">
+          <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate class="form-group"
+            style="font-family: Serif; font-size: 20px;">
+            <div class="input-group mb-3">
+              <div class="form-floating">
+                <input type="email" class="form-control rounded-pill ps-4" id="email" placeholder="example@gmail.com"
+                  name="email" [(ngModel)]="form.email" required #email="ngModel">
+                <label class="ps-4" for="emailInput">Email</label>
+                <div class="alert alert-danger" role="alert" *ngIf="f.submitted && email.invalid">Email is required!
+                </div>
+              </div>
+              <span class="bg-white input-group-text border-0">
+                <i class="fa-regular fa-at"></i></span>
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="form-floating">
+                <input type="password" class="form-control rounded-pill ps-4" id="password" placeholder="Password"
+                  name="password" [(ngModel)]="form.password" required #password="ngModel">
+                <!-- <label class="ps-4" for="clientPass">Password</label> -->
+                <label class="ps-4" for="password">Password</label>
+                <div class="alert alert-danger" role="alert" *ngIf="f.submitted && password.invalid">
+                  <div *ngIf="password.errors?.['required']">Password is required</div>
+                </div>
+              </div>
+              <span class="bg-white input-group-text border-0"><span class="fas fa-light fa-lock"></span></span>
+            </div>
+            <div class="form-group text-center">
+              <button class="btn btn-lg rounded-pill" style="background-color: #797bf4; color: white;">
+                Login <i class="bi bi-arrow-right-circle"></i></button>
+            </div>
+            <div class="form-group">
+              <div class="alert alert-danger" role="alert" *ngIf="isLoginFailed">Login failed: {{ errorMessage }}</div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="col-6 mt-5 ms-5 ps-5">
+        <!-- col2 the illustration -->
+
+        <img class="img-fluid" src="/assets/img/loginimage.png" alt="coupon">
+
+      </div>
+    </div>
+  </div>
+</div>
