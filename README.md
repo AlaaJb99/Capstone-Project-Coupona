@@ -6,14 +6,9 @@ Companies are responsible for adding new coupons, while the administrator has th
 
 <img src="./login.jpeg" alt="login page" width="600"/>
 
-<br>
-
 # **Backend**
 ### **Microservices architecture**
-<br>
 <img src="./microservices_architecture.png" alt="microservices_architecture" width="600"/>
-
-<br>
 
 ### **Technologies:**
 * Java
@@ -29,11 +24,9 @@ Companies are responsible for adding new coupons, while the administrator has th
 * Eclipse
 
 # **Frontend**
-    The frontend developed with Angular in the following image is the structure of the frontend components:
-<br>
-    <img src="./components.png" alt="components" width="600"/>
-
-<br>
+The frontend developed with Angular in the following image is the structure of the frontend components:
+    
+<img src="./components.png" alt="components" width="600"/>
 
 ### **Technologies:**
 * Angular
